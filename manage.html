@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manage Chores - Chore Management System</title>
+    <link rel="stylesheet" href="manage.css" />
+  </head>
+  <body>
+    <h2>Manage Chores</h2>
+
+    <section>
+      <h3>Ongoing/Pending Chore Assignments</h3>
+      <table id="ongoing-tasks-table">
+        <thead>
+          <tr>
+            <th>Chore Name</th>
+            <th>Assigned By</th>
+            <th>Date Assigned</th>
+            <th>Date Due</th>
+            <th>Chore Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr id="ongoing-chore-choreId1">
+            <td>Mow the Lawn</td>
+            <td>John Doe</td>
+            <td>2024-01-29</td>
+            <td>2024-02-05</td>
+            <td>Pending</td>
+            <td>
+              <button class="mark-completed-button" data-chore-id="choreId1">
+                Mark as Completed
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h3>Completed Chores</h3>
+      <table id="completed-chores-table">
+        <thead>
+          <tr>
+            <th>Chore Name</th>
+            <th>Assigned By</th>
+            <th>Date Assigned</th>
+            <th>Date Due</th>
+            <th>Chore Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- Completed chores will be appended here -->
+        </tbody>
+      </table>
+    </section>
+
+    <div id="addChoreModal" class="modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeModal()">&times;</span>
+
+       
+        <form action="manage.php" method="post" id="chore_assignment_form"></form>
+          <label for="assign_person">Person Assigned:</label>
+          <input
+            type="text"
+            id="assigned_by"
+            name="assigned_by"
+            required
+          /><br />
+
+          <label for="assign_chore">Name of chore :</label>
+          <input type="text" id="chore_name" name="chore_name" required /><br />
+
+          <label for="due_date">Due Date:</label>
+          <input type="date" id="due_date" name="due_date" required /><br />
+
+          <input
+            type="submit"
+            id="assign_chore_button"
+            name="assign_chore_button"
+            value="Assign Chore"
+          />
+        </form>
+      </div>
+    </div>
+    
+    <button id="add_chore_button">Add Chore</button>
+    <script src="chorescript.js"></script>
+  </body>
+</html>

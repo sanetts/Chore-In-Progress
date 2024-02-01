@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LinkedIn Sign up Page</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h2>Everybody Hates Chores, But We Gotta Do It Anyway</h2>
+<div>
+  <form action = "" method = "get">
+  <label for="fname">First Name</label><br>
+  <input type="text" id="fname" name="fname"><br>
+  <label for="lname">Last Name</label><br>
+  <input type="text" id="lname" name="lname"><br>
+  <p>Select Gender</p><br>
+  <input type="radio" id="gender" name="gender" value = "0">
+  <label for = "gender">Female </label><br>
+  <input type="radio" id="gender" name="gender" value = "1">
+  <label for = "gender">Male </label><br>
+
+
+<label for = "family_role"> Choose Family Role </label>
+<select name = "family_role" id = "family_role">
+  <option value ="0">Select</option>
+  <option value ="1">Father</option>
+  <option value ="2">Mother</option>
+  <option value ="3">Daughter</option>
+  <option value ="4">Son</option>
+</select><br>
+
+<label for="d_o_b">Date of Birth</label>
+  <input type="date" id="d_o_b" name="d_o_b"><br>
+
+  <label for="phone">Enter a phone number</label><br>
+  <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+  <small>Format: 123-456-7890</small><br><br>
+
+
+  <label for="email">Email </label><br>
+  <input type="email" id="email" name="email"><br>
+  <label for="password">Password (6+characters)</label><br>
+  <input type="password" id="password" name="password" required>
+   <br>
+   <button class="button">Sign Up</button>
+
+</form>
+    
+    <h6>By clicking Agree & Join, you agree to the LinkedIn User Agreement, Privacy Policy, and Cookie Policy.</h6>
+
+    <button class="form-button">Continue with Google</button>
+    <p> Already on LinkedIn? <a id = "forget_password" href = "">Sign In </a></p>
+
+
+    </div>
+</body>
+
+</html>
